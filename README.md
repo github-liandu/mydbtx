@@ -37,7 +37,6 @@ func main() {
 
 2. 事务处理
 在 WithTransaction 函数中，你可以通过上下文传递事务处理的所有相关信息，确保事务的提交或回滚。
-
 err := db.WithTransaction(func(ctx context.Context, tx *sql.Tx) error {
     // 执行数据库操作，自动管理事务的提交和回滚
     _, err := tx.ExecContext(ctx, "UPDATE users SET active = ? WHERE id = ?", true, 2)
