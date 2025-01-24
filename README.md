@@ -66,7 +66,7 @@ err := db.WithTransaction(func(ctx context.Context, tx *sql.Tx) error {
 
 ## 安全性与性能
 
-`dbcontextflow` 通过优化事务管理来减少潜在的错误，并利用 Go 的并发特性高效地处理并行请求。确保你的数据操作在高并发环境下能够稳定运行。
+`mydbtx` 通过优化事务管理来减少潜在的错误，并利用 Go 的并发特性高效地处理并行请求。确保你的数据操作在高并发环境下能够稳定运行。
 
 ## 贡献
 
