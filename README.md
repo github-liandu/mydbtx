@@ -74,4 +74,4 @@ err := db.WithTransaction(func(ctx context.Context, tx *sql.Tx) error {
 
 ## 许可
 
-`dbcontextflow` 使用 MIT 许可
+`mydbtx` 使用 MIT 许可
