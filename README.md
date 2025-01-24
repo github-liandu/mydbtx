@@ -32,16 +32,15 @@ func main() {
     })
     if err != nil {
         log.Fatal("事务失败:", err)
-    }
-}
+    }}
 
 2. 事务处理
-在 WithTransaction 函数中，你可以通过上下文传递事务处理的所有相关信息，确保事务的提交或回滚。
-err := db.WithTransaction(func(ctx context.Context, tx *sql.Tx) error {
-    // 执行数据库操作，自动管理事务的提交和回滚
-    _, err := tx.ExecContext(ctx, "UPDATE users SET active = ? WHERE id = ?", true, 2)
-    return err
-})
+    在 WithTransaction 函数中，你可以通过上下文传递事务处理的所有相关信息，确保事务的提交或回滚。
+    err := db.WithTransaction(func(ctx context.Context, tx *sql.Tx) error {
+        // 执行数据库操作，自动管理事务的提交和回滚
+        _, err := tx.ExecContext(ctx, "UPDATE users SET active = ? WHERE id = ?", true, 2)
+        return err
+    })
 
 特性
 自动事务管理：简化数据库事务操作，不需要显式地提交或回滚事务。
